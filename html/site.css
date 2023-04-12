@@ -1,0 +1,43 @@
+h1{
+	font-family : Century Gothic;
+	font-size:3em;
+	font-weight:500;
+	line-height:400%;
+	text-align:center;
+}
+nav,footer{
+	font-family: serif;
+}
+
+h2,h3{
+	font-family :Gabriola;
+}
+
+h2{
+	font-size:2em;
+	color:rgb(35,102, 12);
+}
+dt{
+	font-family :sans-sefif;
+	font-weight:bold;
+}
+header,footer{
+	background-color:rgb(65,132, 42); 
+	color: #eee;
+}
+nav{
+	text-align:center;
+	color:rgb(35,102, 12);
+	text-decoration:none;
+	text-transform:uppercase;
+	letter-spacing:1px;
+}
+footer{
+	font-size:small-caps;
+}
+
+#copyright{
+	font-family:serif;
+font-style:italic;
+text-align:center;	
+}
