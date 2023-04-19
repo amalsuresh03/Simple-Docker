@@ -13,7 +13,7 @@ pipeline{
         stage('Build'){
             steps{
                 script{
-                    def image = docker.build("html-image:latest","")
+                    def image = docker.build("html-image:latest")
                 }
             }
         }
