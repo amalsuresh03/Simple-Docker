@@ -1,5 +1,16 @@
 pipeline{
-    agent{dockerfile true}
+    agent any
+    stages{
+        stage('Clean'){
+            steps{
+                script{
+                    sh '''
+                        docker version
+                    '''
+                }
+            }
+        }
+    }
     stages{
         stage('Build'){
             steps{
