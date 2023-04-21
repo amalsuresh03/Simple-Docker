@@ -30,9 +30,6 @@ pipeline{
                         fi
                         echo "Creating the container"
                         docker run -it -d --rm --name html-image-container -p 9000:80 html-image
-                        echo "Removing dangling images"
-                        docker rmi --force $(docker images -f dangling=true -q)
-                        docker images
                     '''
                 }
             }
