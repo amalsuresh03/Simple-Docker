@@ -40,7 +40,7 @@ pipeline{
 
                         echo "Removing dangling images"
 
-                        docker rmi $(docker images -f dangling=true -q)
+                        docker rmi --force $(docker images -f dangling=true -q)
                     '''
                 }
             }
