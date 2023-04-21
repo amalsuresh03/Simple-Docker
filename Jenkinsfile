@@ -27,7 +27,7 @@ pipeline{
                         chmod 777 html-image:latest.tgz
                         if [ $( docker ps -a | grep html-image-container | wc -l ) -gt 0 ]; then
                           echo "Container exists"
-                          if [ $( docker ps -a | grep html-image-container | wc -l ) -gt 0 ]; then
+                          if [ $( docker ps | grep html-image-container | wc -l ) -gt 0 ]; then
                             echo "Container is running - Stopping it"
                             docker stop html-image-container
                           fi
@@ -35,12 +35,10 @@ pipeline{
                           docker rm html-image-container
                         fi
                         echo "Creating the container"
-
                         docker run -it -d --name html-image-container -p 9000:80 html-image
-
                         echo "Removing dangling images"
-
                         docker rmi --force $(docker images -f dangling=true -q)
+                        docker images
                     '''
                 }
             }
